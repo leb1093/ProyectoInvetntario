@@ -1,0 +1,700 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AltelizaActivosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TB_ATO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="piso" Type="Int32" Nullable="false" />
+    <Property Name="area" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="equipo" Type="Int32" Nullable="false" />
+    <Property Name="estado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="obs" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="imagen" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="usuario_registro" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_registro" Type="DateTime" Precision="3" />
+    <Property Name="usu_ult_modificacion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_ult_modificacion" Type="DateTime" Precision="3" />
+    <Property Name="activo" Type="Int32" />
+    <NavigationProperty Name="Tb_modelosLucesE" Relationship="Self.FK_ATO" FromRole="TB_ATO" ToRole="Tb_modelosLucesE" />
+    <NavigationProperty Name="Tb_Usuario" Relationship="Self.FK_ATO_user" FromRole="TB_ATO" ToRole="Tb_Usuario" />
+    <NavigationProperty Name="Tb_Usuario1" Relationship="Self.FK_ATO_user_ult" FromRole="TB_ATO" ToRole="Tb_Usuario" />
+  </EntityType>
+  <EntityType Name="TB_Hangar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="piso" Type="Int32" Nullable="false" />
+    <Property Name="area" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="equipo" Type="Int32" Nullable="false" />
+    <Property Name="estado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="obs" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="imagen" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="usuario_registro" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_registro" Type="DateTime" Precision="3" />
+    <Property Name="usu_ult_modificacion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_ult_modificacion" Type="DateTime" Precision="3" />
+    <Property Name="activo" Type="Int32" />
+    <NavigationProperty Name="Tb_modelosLucesE" Relationship="Self.FK_Hangar" FromRole="TB_Hangar" ToRole="Tb_modelosLucesE" />
+    <NavigationProperty Name="Tb_Usuario" Relationship="Self.FK_Hangar_user" FromRole="TB_Hangar" ToRole="Tb_Usuario" />
+    <NavigationProperty Name="Tb_Usuario1" Relationship="Self.FK_Hangar_user_ult" FromRole="TB_Hangar" ToRole="Tb_Usuario" />
+  </EntityType>
+  <EntityType Name="Tb_modelosLucesE">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="marca" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="modelo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="tipo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="usuario_registro" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_registro" Type="DateTime" Precision="3" />
+    <Property Name="usu_ult_modificacion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_ult_modificacion" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TB_ATO" Relationship="Self.FK_ATO" FromRole="Tb_modelosLucesE" ToRole="TB_ATO" />
+    <NavigationProperty Name="TB_Hangar" Relationship="Self.FK_Hangar" FromRole="Tb_modelosLucesE" ToRole="TB_Hangar" />
+    <NavigationProperty Name="Tb_Usuario" Relationship="Self.FK_modelosLucesE_user" FromRole="Tb_modelosLucesE" ToRole="Tb_Usuario" />
+    <NavigationProperty Name="Tb_Usuario1" Relationship="Self.FK_modelosLucesE_user_ult" FromRole="Tb_modelosLucesE" ToRole="Tb_Usuario" />
+    <NavigationProperty Name="TB_PlazaLat" Relationship="Self.FK_PlazaLat" FromRole="Tb_modelosLucesE" ToRole="TB_PlazaLat" />
+  </EntityType>
+  <EntityType Name="TB_PlazaLat">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="piso" Type="Int32" Nullable="false" />
+    <Property Name="area" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="equipo" Type="Int32" Nullable="false" />
+    <Property Name="estado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="obs" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="imagen" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="usuario_registro" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_registro" Type="DateTime" Precision="3" />
+    <Property Name="usu_ult_modificacion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_ult_modificacion" Type="DateTime" Precision="3" />
+    <Property Name="activo" Type="Int32" />
+    <NavigationProperty Name="Tb_modelosLucesE" Relationship="Self.FK_PlazaLat" FromRole="TB_PlazaLat" ToRole="Tb_modelosLucesE" />
+    <NavigationProperty Name="Tb_Usuario" Relationship="Self.FK_PlazaLat_user" FromRole="TB_PlazaLat" ToRole="Tb_Usuario" />
+    <NavigationProperty Name="Tb_Usuario1" Relationship="Self.FK_PlazaLat_user_ult" FromRole="TB_PlazaLat" ToRole="Tb_Usuario" />
+  </EntityType>
+  <EntityType Name="Tb_Usuario">
+    <Key>
+      <PropertyRef Name="login_usuario" />
+    </Key>
+    <Property Name="login_usuario" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pass_usuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="niv_usuario" Type="Int32" />
+    <Property Name="est_usuario" Type="Int32" />
+    <Property Name="fec_registro" Type="DateTime" Precision="3" />
+    <Property Name="usuario_registro" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TB_ATO" Relationship="Self.FK_ATO_user" FromRole="Tb_Usuario" ToRole="TB_ATO" />
+    <NavigationProperty Name="TB_ATO1" Relationship="Self.FK_ATO_user_ult" FromRole="Tb_Usuario" ToRole="TB_ATO" />
+    <NavigationProperty Name="TB_Hangar" Relationship="Self.FK_Hangar_user" FromRole="Tb_Usuario" ToRole="TB_Hangar" />
+    <NavigationProperty Name="TB_Hangar1" Relationship="Self.FK_Hangar_user_ult" FromRole="Tb_Usuario" ToRole="TB_Hangar" />
+    <NavigationProperty Name="Tb_modelosLucesE" Relationship="Self.FK_modelosLucesE_user" FromRole="Tb_Usuario" ToRole="Tb_modelosLucesE" />
+    <NavigationProperty Name="Tb_modelosLucesE1" Relationship="Self.FK_modelosLucesE_user_ult" FromRole="Tb_Usuario" ToRole="Tb_modelosLucesE" />
+    <NavigationProperty Name="TB_PlazaLat" Relationship="Self.FK_PlazaLat_user" FromRole="Tb_Usuario" ToRole="TB_PlazaLat" />
+    <NavigationProperty Name="TB_PlazaLat1" Relationship="Self.FK_PlazaLat_user_ult" FromRole="Tb_Usuario" ToRole="TB_PlazaLat" />
+    <NavigationProperty Name="Tb_Usuario1" Relationship="Self.FK_Usuario_user" FromRole="Tb_Usuario" ToRole="Tb_Usuario1" />
+    <NavigationProperty Name="Tb_Usuario2" Relationship="Self.FK_Usuario_user" FromRole="Tb_Usuario1" ToRole="Tb_Usuario" />
+  </EntityType>
+  <EntityType Name="TB_ATOAud">
+    <Key>
+      <PropertyRef Name="piso" />
+      <PropertyRef Name="area" />
+      <PropertyRef Name="equipo" />
+      <PropertyRef Name="estado" />
+    </Key>
+    <Property Name="id" Type="Int32" />
+    <Property Name="piso" Type="Int32" Nullable="false" />
+    <Property Name="area" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="equipo" Type="Int32" Nullable="false" />
+    <Property Name="estado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="obs" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="imagen" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="usuario_registro" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_registro" Type="DateTime" Precision="3" />
+    <Property Name="usu_ult_modificacion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_ult_modificacion" Type="DateTime" Precision="3" />
+    <Property Name="activo" Type="Int32" />
+    <Property Name="accion" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="fec_accion" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="TB_HangarAud">
+    <Key>
+      <PropertyRef Name="piso" />
+      <PropertyRef Name="area" />
+      <PropertyRef Name="equipo" />
+      <PropertyRef Name="estado" />
+    </Key>
+    <Property Name="id" Type="Int32" />
+    <Property Name="piso" Type="Int32" Nullable="false" />
+    <Property Name="area" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="equipo" Type="Int32" Nullable="false" />
+    <Property Name="estado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="obs" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="imagen" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="usuario_registro" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_registro" Type="DateTime" Precision="3" />
+    <Property Name="usu_ult_modificacion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_ult_modificacion" Type="DateTime" Precision="3" />
+    <Property Name="activo" Type="Int32" />
+    <Property Name="accion" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="fec_accion" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Tb_modelosLucesE_Aud">
+    <Key>
+      <PropertyRef Name="marca" />
+      <PropertyRef Name="modelo" />
+      <PropertyRef Name="tipo" />
+    </Key>
+    <Property Name="id" Type="Int32" />
+    <Property Name="marca" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="modelo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tipo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="usuario_registro" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_registro" Type="DateTime" Precision="3" />
+    <Property Name="usu_ult_modificacion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_ult_modificacion" Type="DateTime" Precision="3" />
+    <Property Name="accion" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="fec_accion" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="TB_PlazaLatAud">
+    <Key>
+      <PropertyRef Name="piso" />
+      <PropertyRef Name="area" />
+      <PropertyRef Name="equipo" />
+      <PropertyRef Name="estado" />
+    </Key>
+    <Property Name="id" Type="Int32" />
+    <Property Name="piso" Type="Int32" Nullable="false" />
+    <Property Name="area" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="equipo" Type="Int32" Nullable="false" />
+    <Property Name="estado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="obs" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="imagen" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="usuario_registro" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_registro" Type="DateTime" Precision="3" />
+    <Property Name="usu_ult_modificacion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_ult_modificacion" Type="DateTime" Precision="3" />
+    <Property Name="activo" Type="Int32" />
+    <Property Name="accion" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="fec_accion" Type="DateTime" Precision="0" />
+  </EntityType>
+  <Association Name="FK_ATO">
+    <End Role="Tb_modelosLucesE" Type="Self.Tb_modelosLucesE" Multiplicity="1" />
+    <End Role="TB_ATO" Type="Self.TB_ATO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_modelosLucesE">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TB_ATO">
+        <PropertyRef Name="equipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ATO_user">
+    <End Role="Tb_Usuario" Type="Self.Tb_Usuario" Multiplicity="0..1" />
+    <End Role="TB_ATO" Type="Self.TB_ATO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Usuario">
+        <PropertyRef Name="login_usuario" />
+      </Principal>
+      <Dependent Role="TB_ATO">
+        <PropertyRef Name="usuario_registro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ATO_user_ult">
+    <End Role="Tb_Usuario" Type="Self.Tb_Usuario" Multiplicity="0..1" />
+    <End Role="TB_ATO" Type="Self.TB_ATO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Usuario">
+        <PropertyRef Name="login_usuario" />
+      </Principal>
+      <Dependent Role="TB_ATO">
+        <PropertyRef Name="usu_ult_modificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hangar">
+    <End Role="Tb_modelosLucesE" Type="Self.Tb_modelosLucesE" Multiplicity="1" />
+    <End Role="TB_Hangar" Type="Self.TB_Hangar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_modelosLucesE">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TB_Hangar">
+        <PropertyRef Name="equipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hangar_user">
+    <End Role="Tb_Usuario" Type="Self.Tb_Usuario" Multiplicity="0..1" />
+    <End Role="TB_Hangar" Type="Self.TB_Hangar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Usuario">
+        <PropertyRef Name="login_usuario" />
+      </Principal>
+      <Dependent Role="TB_Hangar">
+        <PropertyRef Name="usuario_registro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hangar_user_ult">
+    <End Role="Tb_Usuario" Type="Self.Tb_Usuario" Multiplicity="0..1" />
+    <End Role="TB_Hangar" Type="Self.TB_Hangar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Usuario">
+        <PropertyRef Name="login_usuario" />
+      </Principal>
+      <Dependent Role="TB_Hangar">
+        <PropertyRef Name="usu_ult_modificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_modelosLucesE_user">
+    <End Role="Tb_Usuario" Type="Self.Tb_Usuario" Multiplicity="0..1" />
+    <End Role="Tb_modelosLucesE" Type="Self.Tb_modelosLucesE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Usuario">
+        <PropertyRef Name="login_usuario" />
+      </Principal>
+      <Dependent Role="Tb_modelosLucesE">
+        <PropertyRef Name="usuario_registro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_modelosLucesE_user_ult">
+    <End Role="Tb_Usuario" Type="Self.Tb_Usuario" Multiplicity="0..1" />
+    <End Role="Tb_modelosLucesE" Type="Self.Tb_modelosLucesE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Usuario">
+        <PropertyRef Name="login_usuario" />
+      </Principal>
+      <Dependent Role="Tb_modelosLucesE">
+        <PropertyRef Name="usu_ult_modificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlazaLat">
+    <End Role="Tb_modelosLucesE" Type="Self.Tb_modelosLucesE" Multiplicity="1" />
+    <End Role="TB_PlazaLat" Type="Self.TB_PlazaLat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_modelosLucesE">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TB_PlazaLat">
+        <PropertyRef Name="equipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlazaLat_user">
+    <End Role="Tb_Usuario" Type="Self.Tb_Usuario" Multiplicity="0..1" />
+    <End Role="TB_PlazaLat" Type="Self.TB_PlazaLat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Usuario">
+        <PropertyRef Name="login_usuario" />
+      </Principal>
+      <Dependent Role="TB_PlazaLat">
+        <PropertyRef Name="usuario_registro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlazaLat_user_ult">
+    <End Role="Tb_Usuario" Type="Self.Tb_Usuario" Multiplicity="0..1" />
+    <End Role="TB_PlazaLat" Type="Self.TB_PlazaLat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Usuario">
+        <PropertyRef Name="login_usuario" />
+      </Principal>
+      <Dependent Role="TB_PlazaLat">
+        <PropertyRef Name="usu_ult_modificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_user">
+    <End Role="Tb_Usuario" Type="Self.Tb_Usuario" Multiplicity="0..1" />
+    <End Role="Tb_Usuario1" Type="Self.Tb_Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Usuario">
+        <PropertyRef Name="login_usuario" />
+      </Principal>
+      <Dependent Role="Tb_Usuario1">
+        <PropertyRef Name="usuario_registro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AltelizaActivosEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TB_ATO" EntityType="Self.TB_ATO" />
+    <EntitySet Name="TB_Hangar" EntityType="Self.TB_Hangar" />
+    <EntitySet Name="Tb_modelosLucesE" EntityType="Self.Tb_modelosLucesE" />
+    <EntitySet Name="TB_PlazaLat" EntityType="Self.TB_PlazaLat" />
+    <EntitySet Name="Tb_Usuario" EntityType="Self.Tb_Usuario" />
+    <EntitySet Name="TB_ATOAud" EntityType="Self.TB_ATOAud" />
+    <EntitySet Name="TB_HangarAud" EntityType="Self.TB_HangarAud" />
+    <EntitySet Name="Tb_modelosLucesE_Aud" EntityType="Self.Tb_modelosLucesE_Aud" />
+    <EntitySet Name="TB_PlazaLatAud" EntityType="Self.TB_PlazaLatAud" />
+    <AssociationSet Name="FK_ATO" Association="Self.FK_ATO">
+      <End Role="Tb_modelosLucesE" EntitySet="Tb_modelosLucesE" />
+      <End Role="TB_ATO" EntitySet="TB_ATO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ATO_user" Association="Self.FK_ATO_user">
+      <End Role="Tb_Usuario" EntitySet="Tb_Usuario" />
+      <End Role="TB_ATO" EntitySet="TB_ATO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ATO_user_ult" Association="Self.FK_ATO_user_ult">
+      <End Role="Tb_Usuario" EntitySet="Tb_Usuario" />
+      <End Role="TB_ATO" EntitySet="TB_ATO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hangar" Association="Self.FK_Hangar">
+      <End Role="Tb_modelosLucesE" EntitySet="Tb_modelosLucesE" />
+      <End Role="TB_Hangar" EntitySet="TB_Hangar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hangar_user" Association="Self.FK_Hangar_user">
+      <End Role="Tb_Usuario" EntitySet="Tb_Usuario" />
+      <End Role="TB_Hangar" EntitySet="TB_Hangar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hangar_user_ult" Association="Self.FK_Hangar_user_ult">
+      <End Role="Tb_Usuario" EntitySet="Tb_Usuario" />
+      <End Role="TB_Hangar" EntitySet="TB_Hangar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_modelosLucesE_user" Association="Self.FK_modelosLucesE_user">
+      <End Role="Tb_Usuario" EntitySet="Tb_Usuario" />
+      <End Role="Tb_modelosLucesE" EntitySet="Tb_modelosLucesE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_modelosLucesE_user_ult" Association="Self.FK_modelosLucesE_user_ult">
+      <End Role="Tb_Usuario" EntitySet="Tb_Usuario" />
+      <End Role="Tb_modelosLucesE" EntitySet="Tb_modelosLucesE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlazaLat" Association="Self.FK_PlazaLat">
+      <End Role="Tb_modelosLucesE" EntitySet="Tb_modelosLucesE" />
+      <End Role="TB_PlazaLat" EntitySet="TB_PlazaLat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlazaLat_user" Association="Self.FK_PlazaLat_user">
+      <End Role="Tb_Usuario" EntitySet="Tb_Usuario" />
+      <End Role="TB_PlazaLat" EntitySet="TB_PlazaLat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlazaLat_user_ult" Association="Self.FK_PlazaLat_user_ult">
+      <End Role="Tb_Usuario" EntitySet="Tb_Usuario" />
+      <End Role="TB_PlazaLat" EntitySet="TB_PlazaLat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_user" Association="Self.FK_Usuario_user">
+      <End Role="Tb_Usuario" EntitySet="Tb_Usuario" />
+      <End Role="Tb_Usuario1" EntitySet="Tb_Usuario" />
+    </AssociationSet>
+    <FunctionImport Name="spu_ActualizarATO">
+      <Parameter Name="vid" Mode="In" Type="Int32" />
+      <Parameter Name="vpiso" Mode="In" Type="Int32" />
+      <Parameter Name="varea" Mode="In" Type="String" />
+      <Parameter Name="vequipo" Mode="In" Type="Int32" />
+      <Parameter Name="vestado" Mode="In" Type="String" />
+      <Parameter Name="vobs" Mode="In" Type="String" />
+      <Parameter Name="vimagen" Mode="In" Type="String" />
+      <Parameter Name="vusu_ult_modificacion" Mode="In" Type="String" />
+      <Parameter Name="vactivo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spu_ActualizarHangar">
+      <Parameter Name="vid" Mode="In" Type="Int32" />
+      <Parameter Name="vpiso" Mode="In" Type="Int32" />
+      <Parameter Name="varea" Mode="In" Type="String" />
+      <Parameter Name="vequipo" Mode="In" Type="Int32" />
+      <Parameter Name="vestado" Mode="In" Type="String" />
+      <Parameter Name="vobs" Mode="In" Type="String" />
+      <Parameter Name="vimagen" Mode="In" Type="String" />
+      <Parameter Name="vusu_ult_modificacion" Mode="In" Type="String" />
+      <Parameter Name="vactivo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spu_ActualizarModelo">
+      <Parameter Name="vid" Mode="In" Type="Int32" />
+      <Parameter Name="vmarca" Mode="In" Type="String" />
+      <Parameter Name="vmodelo" Mode="In" Type="String" />
+      <Parameter Name="vtipo" Mode="In" Type="String" />
+      <Parameter Name="vusu_ult_modificacion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spu_ActualizarPlazaLat">
+      <Parameter Name="vid" Mode="In" Type="Int32" />
+      <Parameter Name="vpiso" Mode="In" Type="Int32" />
+      <Parameter Name="varea" Mode="In" Type="String" />
+      <Parameter Name="vequipo" Mode="In" Type="Int32" />
+      <Parameter Name="vestado" Mode="In" Type="String" />
+      <Parameter Name="vobs" Mode="In" Type="String" />
+      <Parameter Name="vimagen" Mode="In" Type="String" />
+      <Parameter Name="vusu_ult_modificacion" Mode="In" Type="String" />
+      <Parameter Name="vactivo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spu_ConsultarATO" ReturnType="Collection(AltelizaActivosModel.spu_ConsultarATO_Result)">
+      <Parameter Name="vid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spu_ConsultarATO2" ReturnType="Collection(AltelizaActivosModel.spu_ConsultarATO2_Result)">
+      <Parameter Name="vid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spu_ConsultarHangar" ReturnType="Collection(AltelizaActivosModel.spu_ConsultarHangar_Result)">
+      <Parameter Name="vid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spu_ConsultarHangar2" ReturnType="Collection(AltelizaActivosModel.spu_ConsultarHangar2_Result)">
+      <Parameter Name="vid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spu_ConsultarModelo" ReturnType="Collection(AltelizaActivosModel.spu_ConsultarModelo_Result)">
+      <Parameter Name="vid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spu_ConsultarPlazaLat" ReturnType="Collection(AltelizaActivosModel.spu_ConsultarPlazaLat_Result)">
+      <Parameter Name="vid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spu_ConsultarPlazaLat2" ReturnType="Collection(AltelizaActivosModel.spu_ConsultarPlazaLat2_Result)">
+      <Parameter Name="vid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spu_EliminarATO">
+      <Parameter Name="vid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spu_EliminarHangar">
+      <Parameter Name="vid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spu_EliminarModelo">
+      <Parameter Name="vid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spu_EliminarPlazaLat">
+      <Parameter Name="vid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spu_InsertarATO">
+      <Parameter Name="vpiso" Mode="In" Type="Int32" />
+      <Parameter Name="varea" Mode="In" Type="String" />
+      <Parameter Name="vequipo" Mode="In" Type="Int32" />
+      <Parameter Name="vestado" Mode="In" Type="String" />
+      <Parameter Name="vobs" Mode="In" Type="String" />
+      <Parameter Name="vimagen" Mode="In" Type="String" />
+      <Parameter Name="vusu_registro" Mode="In" Type="String" />
+      <Parameter Name="vactivo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spu_InsertarHangar">
+      <Parameter Name="vpiso" Mode="In" Type="Int32" />
+      <Parameter Name="varea" Mode="In" Type="String" />
+      <Parameter Name="vequipo" Mode="In" Type="Int32" />
+      <Parameter Name="vestado" Mode="In" Type="String" />
+      <Parameter Name="vobs" Mode="In" Type="String" />
+      <Parameter Name="vimagen" Mode="In" Type="String" />
+      <Parameter Name="vusu_registro" Mode="In" Type="String" />
+      <Parameter Name="vactivo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spu_InsertarModelo">
+      <Parameter Name="vmarca" Mode="In" Type="String" />
+      <Parameter Name="vmodelo" Mode="In" Type="String" />
+      <Parameter Name="vtipo" Mode="In" Type="String" />
+      <Parameter Name="vusu_registro" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spu_InsertarPlazaLat">
+      <Parameter Name="vpiso" Mode="In" Type="Int32" />
+      <Parameter Name="varea" Mode="In" Type="String" />
+      <Parameter Name="vequipo" Mode="In" Type="Int32" />
+      <Parameter Name="vestado" Mode="In" Type="String" />
+      <Parameter Name="vobs" Mode="In" Type="String" />
+      <Parameter Name="vimagen" Mode="In" Type="String" />
+      <Parameter Name="vusu_registro" Mode="In" Type="String" />
+      <Parameter Name="vactivo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spu_InsertarUsuario">
+      <Parameter Name="vlog_usu" Mode="In" Type="String" />
+      <Parameter Name="vpass" Mode="In" Type="String" />
+      <Parameter Name="vniv" Mode="In" Type="Int32" />
+      <Parameter Name="vest" Mode="In" Type="Int32" />
+      <Parameter Name="vusu_registro" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spu_ListarATO" ReturnType="Collection(AltelizaActivosModel.spu_ListarATO_Result)" />
+    <FunctionImport Name="spu_ListarATO2" ReturnType="Collection(AltelizaActivosModel.spu_ListarATO2_Result)" />
+    <FunctionImport Name="spu_ListarHangar" ReturnType="Collection(AltelizaActivosModel.spu_ListarHangar_Result)" />
+    <FunctionImport Name="spu_ListarHangar2" ReturnType="Collection(AltelizaActivosModel.spu_ListarHangar2_Result)" />
+    <FunctionImport Name="spu_ListarModelo" ReturnType="Collection(AltelizaActivosModel.spu_ListarModelo_Result)" />
+    <FunctionImport Name="spu_ListarPlazaLat" ReturnType="Collection(AltelizaActivosModel.spu_ListarPlazaLat_Result)" />
+    <FunctionImport Name="spu_ListarPlazaLat2" ReturnType="Collection(AltelizaActivosModel.spu_ListarPlazaLat2_Result)" />
+    <FunctionImport Name="usp_ConsultarUsuario" ReturnType="Collection(AltelizaActivosModel.usp_ConsultarUsuario_Result)">
+      <Parameter Name="Login_Usuario" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spu_ListarModelo2" ReturnType="Collection(AltelizaActivosModel.spu_ListarModelo2_Result)" />
+  </EntityContainer>
+  <ComplexType Name="spu_ConsultarATO_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="piso" Nullable="false" />
+    <Property Type="String" Name="area" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="equipo" Nullable="false" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="obs" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="imagen" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="usuario_registro" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="fecha_registro" Nullable="true" Precision="23" />
+    <Property Type="String" Name="usu_ult_modificacion" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="fecha_ult_modificacion" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="activo" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spu_ConsultarATO2_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="piso" Nullable="false" />
+    <Property Type="String" Name="area" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="marca" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="modelo" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="tipo" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="obs" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="imagen" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="activo" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spu_ConsultarHangar_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="piso" Nullable="false" />
+    <Property Type="String" Name="area" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="equipo" Nullable="false" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="obs" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="imagen" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="usuario_registro" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="fecha_registro" Nullable="true" Precision="23" />
+    <Property Type="String" Name="usu_ult_modificacion" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="fecha_ult_modificacion" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="activo" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spu_ConsultarHangar2_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="piso" Nullable="false" />
+    <Property Type="String" Name="area" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="marca" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="modelo" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="tipo" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="obs" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="imagen" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="activo" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spu_ConsultarModelo_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="marca" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="modelo" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="tipo" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="usuario_registro" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="fecha_registro" Nullable="true" Precision="23" />
+    <Property Type="String" Name="usu_ult_modificacion" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="fecha_ult_modificacion" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spu_ConsultarPlazaLat_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="piso" Nullable="false" />
+    <Property Type="String" Name="area" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="equipo" Nullable="false" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="obs" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="imagen" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="usuario_registro" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="fecha_registro" Nullable="true" Precision="23" />
+    <Property Type="String" Name="usu_ult_modificacion" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="fecha_ult_modificacion" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="activo" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spu_ConsultarPlazaLat2_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="piso" Nullable="false" />
+    <Property Type="String" Name="area" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="marca" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="modelo" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="tipo" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="obs" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="imagen" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="activo" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spu_ListarATO_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="piso" Nullable="false" />
+    <Property Type="String" Name="area" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="equipo" Nullable="false" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="obs" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="imagen" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="usuario_registro" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="fecha_registro" Nullable="true" Precision="23" />
+    <Property Type="String" Name="usu_ult_modificacion" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="fecha_ult_modificacion" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="activo" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spu_ListarATO2_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="piso" Nullable="false" />
+    <Property Type="String" Name="area" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="marca" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="modelo" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="tipo" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="obs" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="activo" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spu_ListarHangar_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="piso" Nullable="false" />
+    <Property Type="String" Name="area" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="equipo" Nullable="false" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="obs" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="imagen" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="usuario_registro" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="fecha_registro" Nullable="true" Precision="23" />
+    <Property Type="String" Name="usu_ult_modificacion" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="fecha_ult_modificacion" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="activo" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spu_ListarHangar2_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="piso" Nullable="false" />
+    <Property Type="String" Name="area" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="marca" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="modelo" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="tipo" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="obs" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="activo" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spu_ListarModelo_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="marca" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="modelo" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="tipo" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="usuario_registro" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="fecha_registro" Nullable="true" Precision="23" />
+    <Property Type="String" Name="usu_ult_modificacion" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="fecha_ult_modificacion" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spu_ListarPlazaLat_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="piso" Nullable="false" />
+    <Property Type="String" Name="area" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="equipo" Nullable="false" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="obs" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="imagen" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="usuario_registro" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="fecha_registro" Nullable="true" Precision="23" />
+    <Property Type="String" Name="usu_ult_modificacion" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="fecha_ult_modificacion" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="activo" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spu_ListarPlazaLat2_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="piso" Nullable="false" />
+    <Property Type="String" Name="area" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="marca" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="modelo" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="tipo" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="obs" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="activo" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usp_ConsultarUsuario_Result">
+    <Property Type="String" Name="login_usuario" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="pass_usuario" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="niv_usuario" Nullable="true" />
+    <Property Type="Int32" Name="est_usuario" Nullable="true" />
+    <Property Type="DateTime" Name="fec_registro" Nullable="true" Precision="23" />
+    <Property Type="String" Name="usuario_registro" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="spu_ListarModelo2_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="nom_equipo" Nullable="true" MaxLength="771" />
+  </ComplexType>
+</Schema>

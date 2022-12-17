@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="ServicePlazaLat" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/WCF_Inventario" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicePlazaLat_ConsultarPlazaLat_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPlazaLat" />
+  </wsdl:message>
+  <wsdl:message name="IServicePlazaLat_ConsultarPlazaLat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPlazaLatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicePlazaLat_ConsultarPlazaLat2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPlazaLat2" />
+  </wsdl:message>
+  <wsdl:message name="IServicePlazaLat_ConsultarPlazaLat2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPlazaLat2Response" />
+  </wsdl:message>
+  <wsdl:message name="IServicePlazaLat_ListarPlazaLat_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPlazaLat" />
+  </wsdl:message>
+  <wsdl:message name="IServicePlazaLat_ListarPlazaLat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPlazaLatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicePlazaLat_ListarPlazaLat2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPlazaLat2" />
+  </wsdl:message>
+  <wsdl:message name="IServicePlazaLat_ListarPlazaLat2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPlazaLat2Response" />
+  </wsdl:message>
+  <wsdl:message name="IServicePlazaLat_InsertarPlazaLat_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarPlazaLat" />
+  </wsdl:message>
+  <wsdl:message name="IServicePlazaLat_InsertarPlazaLat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarPlazaLatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicePlazaLat_ActualizarPlazaLat_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarPlazaLat" />
+  </wsdl:message>
+  <wsdl:message name="IServicePlazaLat_ActualizarPlazaLat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarPlazaLatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicePlazaLat_EliminarPlazaLat_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarPlazaLat" />
+  </wsdl:message>
+  <wsdl:message name="IServicePlazaLat_EliminarPlazaLat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarPlazaLatResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicePlazaLat">
+    <wsdl:operation name="ConsultarPlazaLat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePlazaLat/ConsultarPlazaLat" message="tns:IServicePlazaLat_ConsultarPlazaLat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePlazaLat/ConsultarPlazaLatResponse" message="tns:IServicePlazaLat_ConsultarPlazaLat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPlazaLat2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePlazaLat/ConsultarPlazaLat2" message="tns:IServicePlazaLat_ConsultarPlazaLat2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePlazaLat/ConsultarPlazaLat2Response" message="tns:IServicePlazaLat_ConsultarPlazaLat2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarPlazaLat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePlazaLat/ListarPlazaLat" message="tns:IServicePlazaLat_ListarPlazaLat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePlazaLat/ListarPlazaLatResponse" message="tns:IServicePlazaLat_ListarPlazaLat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarPlazaLat2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePlazaLat/ListarPlazaLat2" message="tns:IServicePlazaLat_ListarPlazaLat2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePlazaLat/ListarPlazaLat2Response" message="tns:IServicePlazaLat_ListarPlazaLat2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarPlazaLat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePlazaLat/InsertarPlazaLat" message="tns:IServicePlazaLat_InsertarPlazaLat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePlazaLat/InsertarPlazaLatResponse" message="tns:IServicePlazaLat_InsertarPlazaLat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarPlazaLat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePlazaLat/ActualizarPlazaLat" message="tns:IServicePlazaLat_ActualizarPlazaLat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePlazaLat/ActualizarPlazaLatResponse" message="tns:IServicePlazaLat_ActualizarPlazaLat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarPlazaLat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePlazaLat/EliminarPlazaLat" message="tns:IServicePlazaLat_EliminarPlazaLat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePlazaLat/EliminarPlazaLatResponse" message="tns:IServicePlazaLat_EliminarPlazaLat_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicePlazaLat" type="tns:IServicePlazaLat">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultarPlazaLat">
+      <soap:operation soapAction="http://tempuri.org/IServicePlazaLat/ConsultarPlazaLat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPlazaLat2">
+      <soap:operation soapAction="http://tempuri.org/IServicePlazaLat/ConsultarPlazaLat2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarPlazaLat">
+      <soap:operation soapAction="http://tempuri.org/IServicePlazaLat/ListarPlazaLat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarPlazaLat2">
+      <soap:operation soapAction="http://tempuri.org/IServicePlazaLat/ListarPlazaLat2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarPlazaLat">
+      <soap:operation soapAction="http://tempuri.org/IServicePlazaLat/InsertarPlazaLat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarPlazaLat">
+      <soap:operation soapAction="http://tempuri.org/IServicePlazaLat/ActualizarPlazaLat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarPlazaLat">
+      <soap:operation soapAction="http://tempuri.org/IServicePlazaLat/EliminarPlazaLat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicePlazaLat">
+    <wsdl:port name="BasicHttpBinding_IServicePlazaLat" binding="tns:BasicHttpBinding_IServicePlazaLat">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WCF_Inventario/ServicePlazaLat/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

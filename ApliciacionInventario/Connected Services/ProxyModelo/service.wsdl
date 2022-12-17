@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="ServiceModelo" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/WCF_Inventario" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceModelo_ConsultarModelo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarModelo" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModelo_ConsultarModelo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarModeloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModelo_ListarModelos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarModelos" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModelo_ListarModelos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarModelosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModelo_ListarModelos2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarModelos2" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModelo_ListarModelos2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarModelos2Response" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModelo_InsertarModelo_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarModelo" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModelo_InsertarModelo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarModeloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModelo_ActualizarModelo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarModelo" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModelo_ActualizarModelo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarModeloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModelo_EliminarModelo_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarModelo" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModelo_EliminarModelo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarModeloResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceModelo">
+    <wsdl:operation name="ConsultarModelo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModelo/ConsultarModelo" message="tns:IServiceModelo_ConsultarModelo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModelo/ConsultarModeloResponse" message="tns:IServiceModelo_ConsultarModelo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarModelos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModelo/ListarModelos" message="tns:IServiceModelo_ListarModelos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModelo/ListarModelosResponse" message="tns:IServiceModelo_ListarModelos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarModelos2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModelo/ListarModelos2" message="tns:IServiceModelo_ListarModelos2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModelo/ListarModelos2Response" message="tns:IServiceModelo_ListarModelos2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarModelo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModelo/InsertarModelo" message="tns:IServiceModelo_InsertarModelo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModelo/InsertarModeloResponse" message="tns:IServiceModelo_InsertarModelo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarModelo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModelo/ActualizarModelo" message="tns:IServiceModelo_ActualizarModelo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModelo/ActualizarModeloResponse" message="tns:IServiceModelo_ActualizarModelo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarModelo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModelo/EliminarModelo" message="tns:IServiceModelo_EliminarModelo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModelo/EliminarModeloResponse" message="tns:IServiceModelo_EliminarModelo_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceModelo" type="tns:IServiceModelo">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultarModelo">
+      <soap:operation soapAction="http://tempuri.org/IServiceModelo/ConsultarModelo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarModelos">
+      <soap:operation soapAction="http://tempuri.org/IServiceModelo/ListarModelos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarModelos2">
+      <soap:operation soapAction="http://tempuri.org/IServiceModelo/ListarModelos2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarModelo">
+      <soap:operation soapAction="http://tempuri.org/IServiceModelo/InsertarModelo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarModelo">
+      <soap:operation soapAction="http://tempuri.org/IServiceModelo/ActualizarModelo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarModelo">
+      <soap:operation soapAction="http://tempuri.org/IServiceModelo/EliminarModelo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceModelo">
+    <wsdl:port name="BasicHttpBinding_IServiceModelo" binding="tns:BasicHttpBinding_IServiceModelo">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WCF_Inventario/ServiceModelo/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

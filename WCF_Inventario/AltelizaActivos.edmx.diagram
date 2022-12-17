@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1e3c95a44494437d9849ae7935d28ac1" Name="Diagram1">
+        <EntityTypeShape EntityType="AltelizaActivosModel.TB_ATO" Width="1.5" PointX="5.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AltelizaActivosModel.TB_Hangar" Width="1.5" PointX="8.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AltelizaActivosModel.Tb_modelosLucesE" Width="1.5" PointX="3" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AltelizaActivosModel.TB_PlazaLat" Width="1.5" PointX="5.25" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AltelizaActivosModel.Tb_Usuario" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="AltelizaActivosModel.TB_ATOAud" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AltelizaActivosModel.TB_HangarAud" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AltelizaActivosModel.Tb_modelosLucesE_Aud" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AltelizaActivosModel.TB_PlazaLatAud" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="AltelizaActivosModel.FK_ATO" ManuallyRouted="false" />
+        <AssociationConnector Association="AltelizaActivosModel.FK_ATO_user" ManuallyRouted="false" />
+        <AssociationConnector Association="AltelizaActivosModel.FK_ATO_user_ult" ManuallyRouted="false" />
+        <AssociationConnector Association="AltelizaActivosModel.FK_Hangar" ManuallyRouted="false" />
+        <AssociationConnector Association="AltelizaActivosModel.FK_Hangar_user" ManuallyRouted="false" />
+        <AssociationConnector Association="AltelizaActivosModel.FK_Hangar_user_ult" ManuallyRouted="false" />
+        <AssociationConnector Association="AltelizaActivosModel.FK_modelosLucesE_user" ManuallyRouted="false" />
+        <AssociationConnector Association="AltelizaActivosModel.FK_modelosLucesE_user_ult" ManuallyRouted="false" />
+        <AssociationConnector Association="AltelizaActivosModel.FK_PlazaLat" ManuallyRouted="false" />
+        <AssociationConnector Association="AltelizaActivosModel.FK_PlazaLat_user" ManuallyRouted="false" />
+        <AssociationConnector Association="AltelizaActivosModel.FK_PlazaLat_user_ult" ManuallyRouted="false" />
+        <AssociationConnector Association="AltelizaActivosModel.FK_Usuario_user" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

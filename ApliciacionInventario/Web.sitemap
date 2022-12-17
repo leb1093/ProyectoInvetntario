@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+     <siteMapNode title="Menu" description="Menu del Sistema" 
+      url="~/MenuPrincipal.aspx">
+    
+    <siteMapNode title="Modelo Luces"
+       description="Mantenimientos Modelo de luces" 
+       url="~/Modelos/ModeloLuces.aspx">
+      </siteMapNode>
+    <siteMapNode title="Luces Hangar" 
+         description="Mantenimientos luces hangar"
+         url="~/Hangar/MenuHangar.aspx">
+     </siteMapNode>
+       
+    <siteMapNode title="Luces ATO" 
+         description="Mantenimientos luces ATO" 
+         url="~/Ato/MenuAto.aspx">
+     </siteMapNode>
+       
+       <siteMapNode title="Luces Plaza Latam"
+         description="Mantenimientos luces Plaza Latam"
+         url="~/PlazaLatam/MenuPlazaLatam.aspx">
+       </siteMapNode>
+       <siteMapNode title="Graficas"
+         description="Graficas"
+         url="~/Graficas.aspx">
+       </siteMapNode>
+       <!--
+	   <siteMapNode title="Salir"
+         description="Cerrar Sesion"
+         url="~/WebLogout.aspx">
+	   </siteMapNode
+     -->
+    </siteMapNode>
+  </siteMap>

@@ -1,0 +1,12 @@
+C:\Users\User\source\repos\ProyectoInvetntario\WCF_Inventario\bin\Debug\WCF_Inventario.dll.config
+C:\Users\User\source\repos\ProyectoInvetntario\WCF_Inventario\bin\Debug\WCF_Inventario.dll
+C:\Users\User\source\repos\ProyectoInvetntario\WCF_Inventario\bin\Debug\WCF_Inventario.pdb
+C:\Users\User\source\repos\ProyectoInvetntario\WCF_Inventario\bin\Debug\EntityFramework.dll
+C:\Users\User\source\repos\ProyectoInvetntario\WCF_Inventario\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\source\repos\ProyectoInvetntario\WCF_Inventario\bin\Debug\EntityFramework.xml
+C:\Users\User\source\repos\ProyectoInvetntario\WCF_Inventario\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\source\repos\ProyectoInvetntario\WCF_Inventario\obj\Debug\WCF_Inventario.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ProyectoInvetntario\WCF_Inventario\obj\Debug\WCF_Inventario.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ProyectoInvetntario\WCF_Inventario\obj\Debug\WCF_Inventario.csproj.CopyComplete
+C:\Users\User\source\repos\ProyectoInvetntario\WCF_Inventario\obj\Debug\WCF_Inventario.dll
+C:\Users\User\source\repos\ProyectoInvetntario\WCF_Inventario\obj\Debug\WCF_Inventario.pdb

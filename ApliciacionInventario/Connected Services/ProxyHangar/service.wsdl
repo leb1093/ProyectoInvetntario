@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="ServiceHangar" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/WCF_Inventario" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceHangar_ConsultarHangar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarHangar" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHangar_ConsultarHangar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarHangarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHangar_ConsultarHangar2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarHangar2" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHangar_ConsultarHangar2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarHangar2Response" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHangar_ListarHangar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarHangar" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHangar_ListarHangar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarHangarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHangar_ListarHangar2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarHangar2" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHangar_ListarHangar2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarHangar2Response" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHangar_InsertarHangar_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarHangar" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHangar_InsertarHangar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarHangarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHangar_ActualizarHangar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarHangar" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHangar_ActualizarHangar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarHangarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHangar_EliminarHangar_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarHangar" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHangar_EliminarHangar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarHangarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceHangar">
+    <wsdl:operation name="ConsultarHangar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceHangar/ConsultarHangar" message="tns:IServiceHangar_ConsultarHangar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceHangar/ConsultarHangarResponse" message="tns:IServiceHangar_ConsultarHangar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarHangar2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceHangar/ConsultarHangar2" message="tns:IServiceHangar_ConsultarHangar2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceHangar/ConsultarHangar2Response" message="tns:IServiceHangar_ConsultarHangar2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarHangar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceHangar/ListarHangar" message="tns:IServiceHangar_ListarHangar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceHangar/ListarHangarResponse" message="tns:IServiceHangar_ListarHangar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarHangar2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceHangar/ListarHangar2" message="tns:IServiceHangar_ListarHangar2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceHangar/ListarHangar2Response" message="tns:IServiceHangar_ListarHangar2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarHangar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceHangar/InsertarHangar" message="tns:IServiceHangar_InsertarHangar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceHangar/InsertarHangarResponse" message="tns:IServiceHangar_InsertarHangar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarHangar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceHangar/ActualizarHangar" message="tns:IServiceHangar_ActualizarHangar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceHangar/ActualizarHangarResponse" message="tns:IServiceHangar_ActualizarHangar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarHangar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceHangar/EliminarHangar" message="tns:IServiceHangar_EliminarHangar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceHangar/EliminarHangarResponse" message="tns:IServiceHangar_EliminarHangar_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceHangar" type="tns:IServiceHangar">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultarHangar">
+      <soap:operation soapAction="http://tempuri.org/IServiceHangar/ConsultarHangar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarHangar2">
+      <soap:operation soapAction="http://tempuri.org/IServiceHangar/ConsultarHangar2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarHangar">
+      <soap:operation soapAction="http://tempuri.org/IServiceHangar/ListarHangar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarHangar2">
+      <soap:operation soapAction="http://tempuri.org/IServiceHangar/ListarHangar2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarHangar">
+      <soap:operation soapAction="http://tempuri.org/IServiceHangar/InsertarHangar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarHangar">
+      <soap:operation soapAction="http://tempuri.org/IServiceHangar/ActualizarHangar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarHangar">
+      <soap:operation soapAction="http://tempuri.org/IServiceHangar/EliminarHangar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceHangar">
+    <wsdl:port name="BasicHttpBinding_IServiceHangar" binding="tns:BasicHttpBinding_IServiceHangar">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WCF_Inventario/ServiceHangar/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

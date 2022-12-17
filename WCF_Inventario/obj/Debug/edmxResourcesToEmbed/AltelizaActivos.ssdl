@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AltelizaActivosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TB_ATO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="piso" Type="int" Nullable="false" />
+    <Property Name="area" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="equipo" Type="int" Nullable="false" />
+    <Property Name="estado" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="obs" Type="varchar" MaxLength="255" />
+    <Property Name="imagen" Type="varchar" MaxLength="255" />
+    <Property Name="usuario_registro" Type="varchar" MaxLength="10" />
+    <Property Name="fecha_registro" Type="datetime" />
+    <Property Name="usu_ult_modificacion" Type="varchar" MaxLength="10" />
+    <Property Name="fecha_ult_modificacion" Type="datetime" />
+    <Property Name="activo" Type="int" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'AltelizaActivos.dbo.TB_ATOAud' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="TB_ATOAud">
+    <Key>
+      <PropertyRef Name="piso" />
+      <PropertyRef Name="area" />
+      <PropertyRef Name="equipo" />
+      <PropertyRef Name="estado" />
+    </Key>
+    <Property Name="id" Type="int" />
+    <Property Name="piso" Type="int" Nullable="false" />
+    <Property Name="area" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="equipo" Type="int" Nullable="false" />
+    <Property Name="estado" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="obs" Type="varchar" MaxLength="255" />
+    <Property Name="imagen" Type="varchar" MaxLength="255" />
+    <Property Name="usuario_registro" Type="varchar" MaxLength="10" />
+    <Property Name="fecha_registro" Type="datetime" />
+    <Property Name="usu_ult_modificacion" Type="varchar" MaxLength="10" />
+    <Property Name="fecha_ult_modificacion" Type="datetime" />
+    <Property Name="activo" Type="int" />
+    <Property Name="accion" Type="varchar" MaxLength="20" />
+    <Property Name="fec_accion" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="TB_Hangar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="piso" Type="int" Nullable="false" />
+    <Property Name="area" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="equipo" Type="int" Nullable="false" />
+    <Property Name="estado" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="obs" Type="varchar" MaxLength="255" />
+    <Property Name="imagen" Type="varchar" MaxLength="255" />
+    <Property Name="usuario_registro" Type="varchar" MaxLength="10" />
+    <Property Name="fecha_registro" Type="datetime" />
+    <Property Name="usu_ult_modificacion" Type="varchar" MaxLength="10" />
+    <Property Name="fecha_ult_modificacion" Type="datetime" />
+    <Property Name="activo" Type="int" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'AltelizaActivos.dbo.TB_HangarAud' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="TB_HangarAud">
+    <Key>
+      <PropertyRef Name="piso" />
+      <PropertyRef Name="area" />
+      <PropertyRef Name="equipo" />
+      <PropertyRef Name="estado" />
+    </Key>
+    <Property Name="id" Type="int" />
+    <Property Name="piso" Type="int" Nullable="false" />
+    <Property Name="area" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="equipo" Type="int" Nullable="false" />
+    <Property Name="estado" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="obs" Type="varchar" MaxLength="255" />
+    <Property Name="imagen" Type="varchar" MaxLength="255" />
+    <Property Name="usuario_registro" Type="varchar" MaxLength="10" />
+    <Property Name="fecha_registro" Type="datetime" />
+    <Property Name="usu_ult_modificacion" Type="varchar" MaxLength="10" />
+    <Property Name="fecha_ult_modificacion" Type="datetime" />
+    <Property Name="activo" Type="int" />
+    <Property Name="accion" Type="varchar" MaxLength="20" />
+    <Property Name="fec_accion" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="Tb_modelosLucesE">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="marca" Type="varchar" MaxLength="255" />
+    <Property Name="modelo" Type="varchar" MaxLength="255" />
+    <Property Name="tipo" Type="varchar" MaxLength="255" />
+    <Property Name="usuario_registro" Type="varchar" MaxLength="10" />
+    <Property Name="fecha_registro" Type="datetime" />
+    <Property Name="usu_ult_modificacion" Type="varchar" MaxLength="10" />
+    <Property Name="fecha_ult_modificacion" Type="datetime" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'AltelizaActivos.dbo.Tb_modelosLucesE_Aud' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="Tb_modelosLucesE_Aud">
+    <Key>
+      <PropertyRef Name="marca" />
+      <PropertyRef Name="modelo" />
+      <PropertyRef Name="tipo" />
+    </Key>
+    <Property Name="id" Type="int" />
+    <Property Name="marca" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="modelo" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="tipo" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="usuario_registro" Type="varchar" MaxLength="10" />
+    <Property Name="fecha_registro" Type="datetime" />
+    <Property Name="usu_ult_modificacion" Type="varchar" MaxLength="10" />
+    <Property Name="fecha_ult_modificacion" Type="datetime" />
+    <Property Name="accion" Type="varchar" MaxLength="20" />
+    <Property Name="fec_accion" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="TB_PlazaLat">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="piso" Type="int" Nullable="false" />
+    <Property Name="area" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="equipo" Type="int" Nullable="false" />
+    <Property Name="estado" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="obs" Type="varchar" MaxLength="255" />
+    <Property Name="imagen" Type="varchar" MaxLength="255" />
+    <Property Name="usuario_registro" Type="varchar" MaxLength="10" />
+    <Property Name="fecha_registro" Type="datetime" />
+    <Property Name="usu_ult_modificacion" Type="varchar" MaxLength="10" />
+    <Property Name="fecha_ult_modificacion" Type="datetime" />
+    <Property Name="activo" Type="int" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'AltelizaActivos.dbo.TB_PlazaLatAud' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="TB_PlazaLatAud">
+    <Key>
+      <PropertyRef Name="piso" />
+      <PropertyRef Name="area" />
+      <PropertyRef Name="equipo" />
+      <PropertyRef Name="estado" />
+    </Key>
+    <Property Name="id" Type="int" />
+    <Property Name="piso" Type="int" Nullable="false" />
+    <Property Name="area" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="equipo" Type="int" Nullable="false" />
+    <Property Name="estado" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="obs" Type="varchar" MaxLength="255" />
+    <Property Name="imagen" Type="varchar" MaxLength="255" />
+    <Property Name="usuario_registro" Type="varchar" MaxLength="10" />
+    <Property Name="fecha_registro" Type="datetime" />
+    <Property Name="usu_ult_modificacion" Type="varchar" MaxLength="10" />
+    <Property Name="fecha_ult_modificacion" Type="datetime" />
+    <Property Name="activo" Type="int" />
+    <Property Name="accion" Type="varchar" MaxLength="20" />
+    <Property Name="fec_accion" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="Tb_Usuario">
+    <Key>
+      <PropertyRef Name="login_usuario" />
+    </Key>
+    <Property Name="login_usuario" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="pass_usuario" Type="varchar" MaxLength="20" />
+    <Property Name="niv_usuario" Type="int" />
+    <Property Name="est_usuario" Type="int" />
+    <Property Name="fec_registro" Type="datetime" />
+    <Property Name="usuario_registro" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <Association Name="FK_ATO">
+    <End Role="Tb_modelosLucesE" Type="Self.Tb_modelosLucesE" Multiplicity="1" />
+    <End Role="TB_ATO" Type="Self.TB_ATO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_modelosLucesE">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TB_ATO">
+        <PropertyRef Name="equipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ATO_user">
+    <End Role="Tb_Usuario" Type="Self.Tb_Usuario" Multiplicity="0..1" />
+    <End Role="TB_ATO" Type="Self.TB_ATO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Usuario">
+        <PropertyRef Name="login_usuario" />
+      </Principal>
+      <Dependent Role="TB_ATO">
+        <PropertyRef Name="usuario_registro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ATO_user_ult">
+    <End Role="Tb_Usuario" Type="Self.Tb_Usuario" Multiplicity="0..1" />
+    <End Role="TB_ATO" Type="Self.TB_ATO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Usuario">
+        <PropertyRef Name="login_usuario" />
+      </Principal>
+      <Dependent Role="TB_ATO">
+        <PropertyRef Name="usu_ult_modificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hangar">
+    <End Role="Tb_modelosLucesE" Type="Self.Tb_modelosLucesE" Multiplicity="1" />
+    <End Role="TB_Hangar" Type="Self.TB_Hangar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_modelosLucesE">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TB_Hangar">
+        <PropertyRef Name="equipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hangar_user">
+    <End Role="Tb_Usuario" Type="Self.Tb_Usuario" Multiplicity="0..1" />
+    <End Role="TB_Hangar" Type="Self.TB_Hangar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Usuario">
+        <PropertyRef Name="login_usuario" />
+      </Principal>
+      <Dependent Role="TB_Hangar">
+        <PropertyRef Name="usuario_registro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hangar_user_ult">
+    <End Role="Tb_Usuario" Type="Self.Tb_Usuario" Multiplicity="0..1" />
+    <End Role="TB_Hangar" Type="Self.TB_Hangar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Usuario">
+        <PropertyRef Name="login_usuario" />
+      </Principal>
+      <Dependent Role="TB_Hangar">
+        <PropertyRef Name="usu_ult_modificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_modelosLucesE_user">
+    <End Role="Tb_Usuario" Type="Self.Tb_Usuario" Multiplicity="0..1" />
+    <End Role="Tb_modelosLucesE" Type="Self.Tb_modelosLucesE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Usuario">
+        <PropertyRef Name="login_usuario" />
+      </Principal>
+      <Dependent Role="Tb_modelosLucesE">
+        <PropertyRef Name="usuario_registro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_modelosLucesE_user_ult">
+    <End Role="Tb_Usuario" Type="Self.Tb_Usuario" Multiplicity="0..1" />
+    <End Role="Tb_modelosLucesE" Type="Self.Tb_modelosLucesE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Usuario">
+        <PropertyRef Name="login_usuario" />
+      </Principal>
+      <Dependent Role="Tb_modelosLucesE">
+        <PropertyRef Name="usu_ult_modificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlazaLat">
+    <End Role="Tb_modelosLucesE" Type="Self.Tb_modelosLucesE" Multiplicity="1" />
+    <End Role="TB_PlazaLat" Type="Self.TB_PlazaLat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_modelosLucesE">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TB_PlazaLat">
+        <PropertyRef Name="equipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlazaLat_user">
+    <End Role="Tb_Usuario" Type="Self.Tb_Usuario" Multiplicity="0..1" />
+    <End Role="TB_PlazaLat" Type="Self.TB_PlazaLat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Usuario">
+        <PropertyRef Name="login_usuario" />
+      </Principal>
+      <Dependent Role="TB_PlazaLat">
+        <PropertyRef Name="usuario_registro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlazaLat_user_ult">
+    <End Role="Tb_Usuario" Type="Self.Tb_Usuario" Multiplicity="0..1" />
+    <End Role="TB_PlazaLat" Type="Self.TB_PlazaLat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Usuario">
+        <PropertyRef Name="login_usuario" />
+      </Principal>
+      <Dependent Role="TB_PlazaLat">
+        <PropertyRef Name="usu_ult_modificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_user">
+    <End Role="Tb_Usuario" Type="Self.Tb_Usuario" Multiplicity="0..1" />
+    <End Role="Tb_Usuario1" Type="Self.Tb_Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Usuario">
+        <PropertyRef Name="login_usuario" />
+      </Principal>
+      <Dependent Role="Tb_Usuario1">
+        <PropertyRef Name="usuario_registro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="spu_ActualizarATO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vid" Type="int" Mode="In" />
+    <Parameter Name="vpiso" Type="int" Mode="In" />
+    <Parameter Name="varea" Type="varchar" Mode="In" />
+    <Parameter Name="vequipo" Type="int" Mode="In" />
+    <Parameter Name="vestado" Type="varchar" Mode="In" />
+    <Parameter Name="vobs" Type="varchar" Mode="In" />
+    <Parameter Name="vimagen" Type="varchar" Mode="In" />
+    <Parameter Name="vusu_ult_modificacion" Type="varchar" Mode="In" />
+    <Parameter Name="vactivo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spu_ActualizarHangar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vid" Type="int" Mode="In" />
+    <Parameter Name="vpiso" Type="int" Mode="In" />
+    <Parameter Name="varea" Type="varchar" Mode="In" />
+    <Parameter Name="vequipo" Type="int" Mode="In" />
+    <Parameter Name="vestado" Type="varchar" Mode="In" />
+    <Parameter Name="vobs" Type="varchar" Mode="In" />
+    <Parameter Name="vimagen" Type="varchar" Mode="In" />
+    <Parameter Name="vusu_ult_modificacion" Type="varchar" Mode="In" />
+    <Parameter Name="vactivo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spu_ActualizarModelo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vid" Type="int" Mode="In" />
+    <Parameter Name="vmarca" Type="varchar" Mode="In" />
+    <Parameter Name="vmodelo" Type="varchar" Mode="In" />
+    <Parameter Name="vtipo" Type="varchar" Mode="In" />
+    <Parameter Name="vusu_ult_modificacion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spu_ActualizarPlazaLat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vid" Type="int" Mode="In" />
+    <Parameter Name="vpiso" Type="int" Mode="In" />
+    <Parameter Name="varea" Type="varchar" Mode="In" />
+    <Parameter Name="vequipo" Type="int" Mode="In" />
+    <Parameter Name="vestado" Type="varchar" Mode="In" />
+    <Parameter Name="vobs" Type="varchar" Mode="In" />
+    <Parameter Name="vimagen" Type="varchar" Mode="In" />
+    <Parameter Name="vusu_ult_modificacion" Type="varchar" Mode="In" />
+    <Parameter Name="vactivo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spu_ConsultarATO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spu_ConsultarATO2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spu_ConsultarHangar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spu_ConsultarHangar2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spu_ConsultarModelo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spu_ConsultarPlazaLat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spu_ConsultarPlazaLat2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spu_EliminarATO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spu_EliminarHangar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spu_EliminarModelo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spu_EliminarPlazaLat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spu_InsertarATO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vpiso" Type="int" Mode="In" />
+    <Parameter Name="varea" Type="varchar" Mode="In" />
+    <Parameter Name="vequipo" Type="int" Mode="In" />
+    <Parameter Name="vestado" Type="varchar" Mode="In" />
+    <Parameter Name="vobs" Type="varchar" Mode="In" />
+    <Parameter Name="vimagen" Type="varchar" Mode="In" />
+    <Parameter Name="vusu_registro" Type="varchar" Mode="In" />
+    <Parameter Name="vactivo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spu_InsertarHangar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vpiso" Type="int" Mode="In" />
+    <Parameter Name="varea" Type="varchar" Mode="In" />
+    <Parameter Name="vequipo" Type="int" Mode="In" />
+    <Parameter Name="vestado" Type="varchar" Mode="In" />
+    <Parameter Name="vobs" Type="varchar" Mode="In" />
+    <Parameter Name="vimagen" Type="varchar" Mode="In" />
+    <Parameter Name="vusu_registro" Type="varchar" Mode="In" />
+    <Parameter Name="vactivo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spu_InsertarModelo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vmarca" Type="varchar" Mode="In" />
+    <Parameter Name="vmodelo" Type="varchar" Mode="In" />
+    <Parameter Name="vtipo" Type="varchar" Mode="In" />
+    <Parameter Name="vusu_registro" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spu_InsertarPlazaLat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vpiso" Type="int" Mode="In" />
+    <Parameter Name="varea" Type="varchar" Mode="In" />
+    <Parameter Name="vequipo" Type="int" Mode="In" />
+    <Parameter Name="vestado" Type="varchar" Mode="In" />
+    <Parameter Name="vobs" Type="varchar" Mode="In" />
+    <Parameter Name="vimagen" Type="varchar" Mode="In" />
+    <Parameter Name="vusu_registro" Type="varchar" Mode="In" />
+    <Parameter Name="vactivo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spu_InsertarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vlog_usu" Type="varchar" Mode="In" />
+    <Parameter Name="vpass" Type="varchar" Mode="In" />
+    <Parameter Name="vniv" Type="int" Mode="In" />
+    <Parameter Name="vest" Type="int" Mode="In" />
+    <Parameter Name="vusu_registro" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spu_ListarATO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spu_ListarATO2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spu_ListarHangar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spu_ListarHangar2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spu_ListarModelo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spu_ListarModelo2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spu_ListarPlazaLat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spu_ListarPlazaLat2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ConsultarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Login_Usuario" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="AltelizaActivosModelStoreContainer">
+    <EntitySet Name="TB_ATO" EntityType="Self.TB_ATO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_Hangar" EntityType="Self.TB_Hangar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_modelosLucesE" EntityType="Self.Tb_modelosLucesE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_PlazaLat" EntityType="Self.TB_PlazaLat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Usuario" EntityType="Self.Tb_Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ATOAud" EntityType="Self.TB_ATOAud" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TB_ATOAud].[id] AS [id], 
+    [TB_ATOAud].[piso] AS [piso], 
+    [TB_ATOAud].[area] AS [area], 
+    [TB_ATOAud].[equipo] AS [equipo], 
+    [TB_ATOAud].[estado] AS [estado], 
+    [TB_ATOAud].[obs] AS [obs], 
+    [TB_ATOAud].[imagen] AS [imagen], 
+    [TB_ATOAud].[usuario_registro] AS [usuario_registro], 
+    [TB_ATOAud].[fecha_registro] AS [fecha_registro], 
+    [TB_ATOAud].[usu_ult_modificacion] AS [usu_ult_modificacion], 
+    [TB_ATOAud].[fecha_ult_modificacion] AS [fecha_ult_modificacion], 
+    [TB_ATOAud].[activo] AS [activo], 
+    [TB_ATOAud].[accion] AS [accion], 
+    [TB_ATOAud].[fec_accion] AS [fec_accion]
+    FROM [dbo].[TB_ATOAud] AS [TB_ATOAud]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TB_HangarAud" EntityType="Self.TB_HangarAud" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TB_HangarAud].[id] AS [id], 
+    [TB_HangarAud].[piso] AS [piso], 
+    [TB_HangarAud].[area] AS [area], 
+    [TB_HangarAud].[equipo] AS [equipo], 
+    [TB_HangarAud].[estado] AS [estado], 
+    [TB_HangarAud].[obs] AS [obs], 
+    [TB_HangarAud].[imagen] AS [imagen], 
+    [TB_HangarAud].[usuario_registro] AS [usuario_registro], 
+    [TB_HangarAud].[fecha_registro] AS [fecha_registro], 
+    [TB_HangarAud].[usu_ult_modificacion] AS [usu_ult_modificacion], 
+    [TB_HangarAud].[fecha_ult_modificacion] AS [fecha_ult_modificacion], 
+    [TB_HangarAud].[activo] AS [activo], 
+    [TB_HangarAud].[accion] AS [accion], 
+    [TB_HangarAud].[fec_accion] AS [fec_accion]
+    FROM [dbo].[TB_HangarAud] AS [TB_HangarAud]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Tb_modelosLucesE_Aud" EntityType="Self.Tb_modelosLucesE_Aud" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Tb_modelosLucesE_Aud].[id] AS [id], 
+    [Tb_modelosLucesE_Aud].[marca] AS [marca], 
+    [Tb_modelosLucesE_Aud].[modelo] AS [modelo], 
+    [Tb_modelosLucesE_Aud].[tipo] AS [tipo], 
+    [Tb_modelosLucesE_Aud].[usuario_registro] AS [usuario_registro], 
+    [Tb_modelosLucesE_Aud].[fecha_registro] AS [fecha_registro], 
+    [Tb_modelosLucesE_Aud].[usu_ult_modificacion] AS [usu_ult_modificacion], 
+    [Tb_modelosLucesE_Aud].[fecha_ult_modificacion] AS [fecha_ult_modificacion], 
+    [Tb_modelosLucesE_Aud].[accion] AS [accion], 
+    [Tb_modelosLucesE_Aud].[fec_accion] AS [fec_accion]
+    FROM [dbo].[Tb_modelosLucesE_Aud] AS [Tb_modelosLucesE_Aud]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TB_PlazaLatAud" EntityType="Self.TB_PlazaLatAud" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TB_PlazaLatAud].[id] AS [id], 
+    [TB_PlazaLatAud].[piso] AS [piso], 
+    [TB_PlazaLatAud].[area] AS [area], 
+    [TB_PlazaLatAud].[equipo] AS [equipo], 
+    [TB_PlazaLatAud].[estado] AS [estado], 
+    [TB_PlazaLatAud].[obs] AS [obs], 
+    [TB_PlazaLatAud].[imagen] AS [imagen], 
+    [TB_PlazaLatAud].[usuario_registro] AS [usuario_registro], 
+    [TB_PlazaLatAud].[fecha_registro] AS [fecha_registro], 
+    [TB_PlazaLatAud].[usu_ult_modificacion] AS [usu_ult_modificacion], 
+    [TB_PlazaLatAud].[fecha_ult_modificacion] AS [fecha_ult_modificacion], 
+    [TB_PlazaLatAud].[activo] AS [activo], 
+    [TB_PlazaLatAud].[accion] AS [accion], 
+    [TB_PlazaLatAud].[fec_accion] AS [fec_accion]
+    FROM [dbo].[TB_PlazaLatAud] AS [TB_PlazaLatAud]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_ATO" Association="Self.FK_ATO">
+      <End Role="Tb_modelosLucesE" EntitySet="Tb_modelosLucesE" />
+      <End Role="TB_ATO" EntitySet="TB_ATO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ATO_user" Association="Self.FK_ATO_user">
+      <End Role="Tb_Usuario" EntitySet="Tb_Usuario" />
+      <End Role="TB_ATO" EntitySet="TB_ATO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ATO_user_ult" Association="Self.FK_ATO_user_ult">
+      <End Role="Tb_Usuario" EntitySet="Tb_Usuario" />
+      <End Role="TB_ATO" EntitySet="TB_ATO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hangar" Association="Self.FK_Hangar">
+      <End Role="Tb_modelosLucesE" EntitySet="Tb_modelosLucesE" />
+      <End Role="TB_Hangar" EntitySet="TB_Hangar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hangar_user" Association="Self.FK_Hangar_user">
+      <End Role="Tb_Usuario" EntitySet="Tb_Usuario" />
+      <End Role="TB_Hangar" EntitySet="TB_Hangar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hangar_user_ult" Association="Self.FK_Hangar_user_ult">
+      <End Role="Tb_Usuario" EntitySet="Tb_Usuario" />
+      <End Role="TB_Hangar" EntitySet="TB_Hangar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_modelosLucesE_user" Association="Self.FK_modelosLucesE_user">
+      <End Role="Tb_Usuario" EntitySet="Tb_Usuario" />
+      <End Role="Tb_modelosLucesE" EntitySet="Tb_modelosLucesE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_modelosLucesE_user_ult" Association="Self.FK_modelosLucesE_user_ult">
+      <End Role="Tb_Usuario" EntitySet="Tb_Usuario" />
+      <End Role="Tb_modelosLucesE" EntitySet="Tb_modelosLucesE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlazaLat" Association="Self.FK_PlazaLat">
+      <End Role="Tb_modelosLucesE" EntitySet="Tb_modelosLucesE" />
+      <End Role="TB_PlazaLat" EntitySet="TB_PlazaLat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlazaLat_user" Association="Self.FK_PlazaLat_user">
+      <End Role="Tb_Usuario" EntitySet="Tb_Usuario" />
+      <End Role="TB_PlazaLat" EntitySet="TB_PlazaLat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlazaLat_user_ult" Association="Self.FK_PlazaLat_user_ult">
+      <End Role="Tb_Usuario" EntitySet="Tb_Usuario" />
+      <End Role="TB_PlazaLat" EntitySet="TB_PlazaLat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_user" Association="Self.FK_Usuario_user">
+      <End Role="Tb_Usuario" EntitySet="Tb_Usuario" />
+      <End Role="Tb_Usuario1" EntitySet="Tb_Usuario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

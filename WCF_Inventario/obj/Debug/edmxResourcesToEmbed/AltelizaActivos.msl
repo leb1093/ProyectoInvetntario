@@ -1,0 +1,527 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AltelizaActivosModelStoreContainer" CdmEntityContainer="AltelizaActivosEntities">
+    <EntitySetMapping Name="TB_ATO">
+      <EntityTypeMapping TypeName="AltelizaActivosModel.TB_ATO">
+        <MappingFragment StoreEntitySet="TB_ATO">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="piso" ColumnName="piso" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="equipo" ColumnName="equipo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="obs" ColumnName="obs" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="usuario_registro" ColumnName="usuario_registro" />
+          <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
+          <ScalarProperty Name="usu_ult_modificacion" ColumnName="usu_ult_modificacion" />
+          <ScalarProperty Name="fecha_ult_modificacion" ColumnName="fecha_ult_modificacion" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="AltelizaActivosModel.TB_ATO">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="AltelizaActivosModel.Store.spu_InsertarATO">
+            <ScalarProperty Name="activo" ParameterName="vactivo" />
+            <ScalarProperty Name="usuario_registro" ParameterName="vusu_registro" />
+            <ScalarProperty Name="imagen" ParameterName="vimagen" />
+            <ScalarProperty Name="obs" ParameterName="vobs" />
+            <ScalarProperty Name="estado" ParameterName="vestado" />
+            <ScalarProperty Name="equipo" ParameterName="vequipo" />
+            <ScalarProperty Name="area" ParameterName="varea" />
+            <ScalarProperty Name="piso" ParameterName="vpiso" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="AltelizaActivosModel.Store.spu_ActualizarATO">
+            <ScalarProperty Name="activo" ParameterName="vactivo" Version="Current" />
+            <ScalarProperty Name="usu_ult_modificacion" ParameterName="vusu_ult_modificacion" Version="Current" />
+            <ScalarProperty Name="imagen" ParameterName="vimagen" Version="Current" />
+            <ScalarProperty Name="obs" ParameterName="vobs" Version="Current" />
+            <ScalarProperty Name="estado" ParameterName="vestado" Version="Current" />
+            <ScalarProperty Name="equipo" ParameterName="vequipo" Version="Current" />
+            <ScalarProperty Name="area" ParameterName="varea" Version="Current" />
+            <ScalarProperty Name="piso" ParameterName="vpiso" Version="Current" />
+            <ScalarProperty Name="id" ParameterName="vid" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="AltelizaActivosModel.Store.spu_EliminarATO">
+            <ScalarProperty Name="id" ParameterName="vid" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_Hangar">
+      <EntityTypeMapping TypeName="AltelizaActivosModel.TB_Hangar">
+        <MappingFragment StoreEntitySet="TB_Hangar">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="piso" ColumnName="piso" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="equipo" ColumnName="equipo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="obs" ColumnName="obs" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="usuario_registro" ColumnName="usuario_registro" />
+          <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
+          <ScalarProperty Name="usu_ult_modificacion" ColumnName="usu_ult_modificacion" />
+          <ScalarProperty Name="fecha_ult_modificacion" ColumnName="fecha_ult_modificacion" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="AltelizaActivosModel.TB_Hangar">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="AltelizaActivosModel.Store.spu_InsertarHangar">
+            <ScalarProperty Name="activo" ParameterName="vactivo" />
+            <ScalarProperty Name="usuario_registro" ParameterName="vusu_registro" />
+            <ScalarProperty Name="imagen" ParameterName="vimagen" />
+            <ScalarProperty Name="obs" ParameterName="vobs" />
+            <ScalarProperty Name="estado" ParameterName="vestado" />
+            <ScalarProperty Name="equipo" ParameterName="vequipo" />
+            <ScalarProperty Name="area" ParameterName="varea" />
+            <ScalarProperty Name="piso" ParameterName="vpiso" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="AltelizaActivosModel.Store.spu_ActualizarHangar">
+            <ScalarProperty Name="activo" ParameterName="vactivo" Version="Current" />
+            <ScalarProperty Name="usu_ult_modificacion" ParameterName="vusu_ult_modificacion" Version="Current" />
+            <ScalarProperty Name="imagen" ParameterName="vimagen" Version="Current" />
+            <ScalarProperty Name="obs" ParameterName="vobs" Version="Current" />
+            <ScalarProperty Name="estado" ParameterName="vestado" Version="Current" />
+            <ScalarProperty Name="equipo" ParameterName="vequipo" Version="Current" />
+            <ScalarProperty Name="area" ParameterName="varea" Version="Current" />
+            <ScalarProperty Name="piso" ParameterName="vpiso" Version="Current" />
+            <ScalarProperty Name="id" ParameterName="vid" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="AltelizaActivosModel.Store.spu_EliminarHangar">
+            <ScalarProperty Name="id" ParameterName="vid" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_modelosLucesE">
+      <EntityTypeMapping TypeName="AltelizaActivosModel.Tb_modelosLucesE">
+        <MappingFragment StoreEntitySet="Tb_modelosLucesE">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="usuario_registro" ColumnName="usuario_registro" />
+          <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
+          <ScalarProperty Name="usu_ult_modificacion" ColumnName="usu_ult_modificacion" />
+          <ScalarProperty Name="fecha_ult_modificacion" ColumnName="fecha_ult_modificacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="AltelizaActivosModel.Tb_modelosLucesE">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="AltelizaActivosModel.Store.spu_InsertarModelo">
+            <ScalarProperty Name="usuario_registro" ParameterName="vusu_registro" />
+            <ScalarProperty Name="tipo" ParameterName="vtipo" />
+            <ScalarProperty Name="modelo" ParameterName="vmodelo" />
+            <ScalarProperty Name="marca" ParameterName="vmarca" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="AltelizaActivosModel.Store.spu_ActualizarModelo">
+            <ScalarProperty Name="usu_ult_modificacion" ParameterName="vusu_ult_modificacion" Version="Current" />
+            <ScalarProperty Name="tipo" ParameterName="vtipo" Version="Current" />
+            <ScalarProperty Name="modelo" ParameterName="vmodelo" Version="Current" />
+            <ScalarProperty Name="marca" ParameterName="vmarca" Version="Current" />
+            <ScalarProperty Name="id" ParameterName="vid" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="AltelizaActivosModel.Store.spu_EliminarModelo">
+            <ScalarProperty Name="id" ParameterName="vid" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_PlazaLat">
+      <EntityTypeMapping TypeName="AltelizaActivosModel.TB_PlazaLat">
+        <MappingFragment StoreEntitySet="TB_PlazaLat">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="piso" ColumnName="piso" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="equipo" ColumnName="equipo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="obs" ColumnName="obs" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="usuario_registro" ColumnName="usuario_registro" />
+          <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
+          <ScalarProperty Name="usu_ult_modificacion" ColumnName="usu_ult_modificacion" />
+          <ScalarProperty Name="fecha_ult_modificacion" ColumnName="fecha_ult_modificacion" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="AltelizaActivosModel.TB_PlazaLat">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="AltelizaActivosModel.Store.spu_InsertarPlazaLat">
+            <ScalarProperty Name="activo" ParameterName="vactivo" />
+            <ScalarProperty Name="usuario_registro" ParameterName="vusu_registro" />
+            <ScalarProperty Name="imagen" ParameterName="vimagen" />
+            <ScalarProperty Name="obs" ParameterName="vobs" />
+            <ScalarProperty Name="estado" ParameterName="vestado" />
+            <ScalarProperty Name="equipo" ParameterName="vequipo" />
+            <ScalarProperty Name="area" ParameterName="varea" />
+            <ScalarProperty Name="piso" ParameterName="vpiso" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="AltelizaActivosModel.Store.spu_ActualizarPlazaLat">
+            <ScalarProperty Name="activo" ParameterName="vactivo" Version="Current" />
+            <ScalarProperty Name="estado" ParameterName="vestado" Version="Current" />
+            <ScalarProperty Name="obs" ParameterName="vobs" Version="Current" />
+            <ScalarProperty Name="usu_ult_modificacion" ParameterName="vusu_ult_modificacion" Version="Current" />
+            <ScalarProperty Name="imagen" ParameterName="vimagen" Version="Current" />
+            <ScalarProperty Name="equipo" ParameterName="vequipo" Version="Current" />
+            <ScalarProperty Name="area" ParameterName="varea" Version="Current" />
+            <ScalarProperty Name="piso" ParameterName="vpiso" Version="Current" />
+            <ScalarProperty Name="id" ParameterName="vid" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="AltelizaActivosModel.Store.spu_EliminarPlazaLat">
+            <ScalarProperty Name="id" ParameterName="vid" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Usuario">
+      <EntityTypeMapping TypeName="AltelizaActivosModel.Tb_Usuario">
+        <MappingFragment StoreEntitySet="Tb_Usuario">
+          <ScalarProperty Name="login_usuario" ColumnName="login_usuario" />
+          <ScalarProperty Name="pass_usuario" ColumnName="pass_usuario" />
+          <ScalarProperty Name="niv_usuario" ColumnName="niv_usuario" />
+          <ScalarProperty Name="est_usuario" ColumnName="est_usuario" />
+          <ScalarProperty Name="fec_registro" ColumnName="fec_registro" />
+          <ScalarProperty Name="usuario_registro" ColumnName="usuario_registro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ATOAud">
+      <EntityTypeMapping TypeName="AltelizaActivosModel.TB_ATOAud">
+        <MappingFragment StoreEntitySet="TB_ATOAud">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="piso" ColumnName="piso" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="equipo" ColumnName="equipo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="obs" ColumnName="obs" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="usuario_registro" ColumnName="usuario_registro" />
+          <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
+          <ScalarProperty Name="usu_ult_modificacion" ColumnName="usu_ult_modificacion" />
+          <ScalarProperty Name="fecha_ult_modificacion" ColumnName="fecha_ult_modificacion" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="accion" ColumnName="accion" />
+          <ScalarProperty Name="fec_accion" ColumnName="fec_accion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_HangarAud">
+      <EntityTypeMapping TypeName="AltelizaActivosModel.TB_HangarAud">
+        <MappingFragment StoreEntitySet="TB_HangarAud">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="piso" ColumnName="piso" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="equipo" ColumnName="equipo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="obs" ColumnName="obs" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="usuario_registro" ColumnName="usuario_registro" />
+          <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
+          <ScalarProperty Name="usu_ult_modificacion" ColumnName="usu_ult_modificacion" />
+          <ScalarProperty Name="fecha_ult_modificacion" ColumnName="fecha_ult_modificacion" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="accion" ColumnName="accion" />
+          <ScalarProperty Name="fec_accion" ColumnName="fec_accion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_modelosLucesE_Aud">
+      <EntityTypeMapping TypeName="AltelizaActivosModel.Tb_modelosLucesE_Aud">
+        <MappingFragment StoreEntitySet="Tb_modelosLucesE_Aud">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="usuario_registro" ColumnName="usuario_registro" />
+          <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
+          <ScalarProperty Name="usu_ult_modificacion" ColumnName="usu_ult_modificacion" />
+          <ScalarProperty Name="fecha_ult_modificacion" ColumnName="fecha_ult_modificacion" />
+          <ScalarProperty Name="accion" ColumnName="accion" />
+          <ScalarProperty Name="fec_accion" ColumnName="fec_accion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_PlazaLatAud">
+      <EntityTypeMapping TypeName="AltelizaActivosModel.TB_PlazaLatAud">
+        <MappingFragment StoreEntitySet="TB_PlazaLatAud">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="piso" ColumnName="piso" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="equipo" ColumnName="equipo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="obs" ColumnName="obs" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="usuario_registro" ColumnName="usuario_registro" />
+          <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
+          <ScalarProperty Name="usu_ult_modificacion" ColumnName="usu_ult_modificacion" />
+          <ScalarProperty Name="fecha_ult_modificacion" ColumnName="fecha_ult_modificacion" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="accion" ColumnName="accion" />
+          <ScalarProperty Name="fec_accion" ColumnName="fec_accion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spu_ActualizarATO" FunctionName="AltelizaActivosModel.Store.spu_ActualizarATO" />
+    <FunctionImportMapping FunctionImportName="spu_ActualizarHangar" FunctionName="AltelizaActivosModel.Store.spu_ActualizarHangar" />
+    <FunctionImportMapping FunctionImportName="spu_ActualizarModelo" FunctionName="AltelizaActivosModel.Store.spu_ActualizarModelo" />
+    <FunctionImportMapping FunctionImportName="spu_ActualizarPlazaLat" FunctionName="AltelizaActivosModel.Store.spu_ActualizarPlazaLat" />
+    <FunctionImportMapping FunctionImportName="spu_ConsultarATO" FunctionName="AltelizaActivosModel.Store.spu_ConsultarATO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AltelizaActivosModel.spu_ConsultarATO_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="piso" ColumnName="piso" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="equipo" ColumnName="equipo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="obs" ColumnName="obs" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="usuario_registro" ColumnName="usuario_registro" />
+          <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
+          <ScalarProperty Name="usu_ult_modificacion" ColumnName="usu_ult_modificacion" />
+          <ScalarProperty Name="fecha_ult_modificacion" ColumnName="fecha_ult_modificacion" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spu_ConsultarATO2" FunctionName="AltelizaActivosModel.Store.spu_ConsultarATO2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AltelizaActivosModel.spu_ConsultarATO2_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="piso" ColumnName="piso" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="obs" ColumnName="obs" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spu_ConsultarHangar" FunctionName="AltelizaActivosModel.Store.spu_ConsultarHangar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AltelizaActivosModel.spu_ConsultarHangar_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="piso" ColumnName="piso" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="equipo" ColumnName="equipo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="obs" ColumnName="obs" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="usuario_registro" ColumnName="usuario_registro" />
+          <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
+          <ScalarProperty Name="usu_ult_modificacion" ColumnName="usu_ult_modificacion" />
+          <ScalarProperty Name="fecha_ult_modificacion" ColumnName="fecha_ult_modificacion" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spu_ConsultarHangar2" FunctionName="AltelizaActivosModel.Store.spu_ConsultarHangar2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AltelizaActivosModel.spu_ConsultarHangar2_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="piso" ColumnName="piso" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="obs" ColumnName="obs" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spu_ConsultarModelo" FunctionName="AltelizaActivosModel.Store.spu_ConsultarModelo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AltelizaActivosModel.spu_ConsultarModelo_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="usuario_registro" ColumnName="usuario_registro" />
+          <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
+          <ScalarProperty Name="usu_ult_modificacion" ColumnName="usu_ult_modificacion" />
+          <ScalarProperty Name="fecha_ult_modificacion" ColumnName="fecha_ult_modificacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spu_ConsultarPlazaLat" FunctionName="AltelizaActivosModel.Store.spu_ConsultarPlazaLat">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AltelizaActivosModel.spu_ConsultarPlazaLat_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="piso" ColumnName="piso" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="equipo" ColumnName="equipo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="obs" ColumnName="obs" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="usuario_registro" ColumnName="usuario_registro" />
+          <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
+          <ScalarProperty Name="usu_ult_modificacion" ColumnName="usu_ult_modificacion" />
+          <ScalarProperty Name="fecha_ult_modificacion" ColumnName="fecha_ult_modificacion" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spu_ConsultarPlazaLat2" FunctionName="AltelizaActivosModel.Store.spu_ConsultarPlazaLat2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AltelizaActivosModel.spu_ConsultarPlazaLat2_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="piso" ColumnName="piso" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="obs" ColumnName="obs" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spu_EliminarATO" FunctionName="AltelizaActivosModel.Store.spu_EliminarATO" />
+    <FunctionImportMapping FunctionImportName="spu_EliminarHangar" FunctionName="AltelizaActivosModel.Store.spu_EliminarHangar" />
+    <FunctionImportMapping FunctionImportName="spu_EliminarModelo" FunctionName="AltelizaActivosModel.Store.spu_EliminarModelo" />
+    <FunctionImportMapping FunctionImportName="spu_EliminarPlazaLat" FunctionName="AltelizaActivosModel.Store.spu_EliminarPlazaLat" />
+    <FunctionImportMapping FunctionImportName="spu_InsertarATO" FunctionName="AltelizaActivosModel.Store.spu_InsertarATO" />
+    <FunctionImportMapping FunctionImportName="spu_InsertarHangar" FunctionName="AltelizaActivosModel.Store.spu_InsertarHangar" />
+    <FunctionImportMapping FunctionImportName="spu_InsertarModelo" FunctionName="AltelizaActivosModel.Store.spu_InsertarModelo" />
+    <FunctionImportMapping FunctionImportName="spu_InsertarPlazaLat" FunctionName="AltelizaActivosModel.Store.spu_InsertarPlazaLat" />
+    <FunctionImportMapping FunctionImportName="spu_InsertarUsuario" FunctionName="AltelizaActivosModel.Store.spu_InsertarUsuario" />
+    <FunctionImportMapping FunctionImportName="spu_ListarATO" FunctionName="AltelizaActivosModel.Store.spu_ListarATO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AltelizaActivosModel.spu_ListarATO_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="piso" ColumnName="piso" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="equipo" ColumnName="equipo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="obs" ColumnName="obs" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="usuario_registro" ColumnName="usuario_registro" />
+          <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
+          <ScalarProperty Name="usu_ult_modificacion" ColumnName="usu_ult_modificacion" />
+          <ScalarProperty Name="fecha_ult_modificacion" ColumnName="fecha_ult_modificacion" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spu_ListarATO2" FunctionName="AltelizaActivosModel.Store.spu_ListarATO2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AltelizaActivosModel.spu_ListarATO2_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="piso" ColumnName="piso" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="obs" ColumnName="obs" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spu_ListarHangar" FunctionName="AltelizaActivosModel.Store.spu_ListarHangar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AltelizaActivosModel.spu_ListarHangar_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="piso" ColumnName="piso" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="equipo" ColumnName="equipo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="obs" ColumnName="obs" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="usuario_registro" ColumnName="usuario_registro" />
+          <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
+          <ScalarProperty Name="usu_ult_modificacion" ColumnName="usu_ult_modificacion" />
+          <ScalarProperty Name="fecha_ult_modificacion" ColumnName="fecha_ult_modificacion" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spu_ListarHangar2" FunctionName="AltelizaActivosModel.Store.spu_ListarHangar2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AltelizaActivosModel.spu_ListarHangar2_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="piso" ColumnName="piso" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="obs" ColumnName="obs" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spu_ListarModelo" FunctionName="AltelizaActivosModel.Store.spu_ListarModelo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AltelizaActivosModel.spu_ListarModelo_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="usuario_registro" ColumnName="usuario_registro" />
+          <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
+          <ScalarProperty Name="usu_ult_modificacion" ColumnName="usu_ult_modificacion" />
+          <ScalarProperty Name="fecha_ult_modificacion" ColumnName="fecha_ult_modificacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spu_ListarPlazaLat" FunctionName="AltelizaActivosModel.Store.spu_ListarPlazaLat">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AltelizaActivosModel.spu_ListarPlazaLat_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="piso" ColumnName="piso" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="equipo" ColumnName="equipo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="obs" ColumnName="obs" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="usuario_registro" ColumnName="usuario_registro" />
+          <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
+          <ScalarProperty Name="usu_ult_modificacion" ColumnName="usu_ult_modificacion" />
+          <ScalarProperty Name="fecha_ult_modificacion" ColumnName="fecha_ult_modificacion" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spu_ListarPlazaLat2" FunctionName="AltelizaActivosModel.Store.spu_ListarPlazaLat2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AltelizaActivosModel.spu_ListarPlazaLat2_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="piso" ColumnName="piso" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="obs" ColumnName="obs" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ConsultarUsuario" FunctionName="AltelizaActivosModel.Store.usp_ConsultarUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AltelizaActivosModel.usp_ConsultarUsuario_Result">
+          <ScalarProperty Name="login_usuario" ColumnName="login_usuario" />
+          <ScalarProperty Name="pass_usuario" ColumnName="pass_usuario" />
+          <ScalarProperty Name="niv_usuario" ColumnName="niv_usuario" />
+          <ScalarProperty Name="est_usuario" ColumnName="est_usuario" />
+          <ScalarProperty Name="fec_registro" ColumnName="fec_registro" />
+          <ScalarProperty Name="usuario_registro" ColumnName="usuario_registro" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spu_ListarModelo2" FunctionName="AltelizaActivosModel.Store.spu_ListarModelo2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AltelizaActivosModel.spu_ListarModelo2_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nom_equipo" ColumnName="nom_equipo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

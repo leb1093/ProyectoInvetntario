@@ -1,0 +1,219 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{98DE3171-1C8D-47D3-B4F1-436B578ED2AF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WCF_Inventario</RootNamespace>
+    <AssemblyName>WCF_Inventario</AssemblyName>
+    <ProjectTypeGuids>{3D9AD99F-2412-4246-B90B-4EAA41C64699};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <StartArguments>/client:"WcfTestClient.exe"</StartArguments>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <XsdCodeGenEnabled>True</XsdCodeGenEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AltelizaActivos.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AltelizaActivos.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AltelizaActivos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AltelizaActivos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AltelizaActivos.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="IService1.cs" />
+    <Compile Include="IServiceAto.cs" />
+    <Compile Include="IServiceHangar.cs" />
+    <Compile Include="IServiceModelo.cs" />
+    <Compile Include="IServicePlazaLat.cs" />
+    <Compile Include="IServiceUsuario.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service1.cs" />
+    <Compile Include="ServiceAto.cs" />
+    <Compile Include="ServiceHangar.cs" />
+    <Compile Include="ServiceModelo.cs" />
+    <Compile Include="ServicePlazaLat.cs" />
+    <Compile Include="ServiceUsuario.cs" />
+    <Compile Include="spu_ConsultarATO2_Result.cs">
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spu_ConsultarATO_Result.cs">
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spu_ConsultarHangar2_Result.cs">
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spu_ConsultarHangar_Result.cs">
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spu_ConsultarModelo_Result.cs">
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spu_ConsultarPlazaLat2_Result.cs">
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spu_ConsultarPlazaLat_Result.cs">
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spu_ListarATO2_Result.cs">
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spu_ListarATO_Result.cs">
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spu_ListarHangar2_Result.cs">
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spu_ListarHangar_Result.cs">
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spu_ListarModelo2_Result.cs">
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spu_ListarModelo_Result.cs">
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spu_ListarPlazaLat2_Result.cs">
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spu_ListarPlazaLat_Result.cs">
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TB_ATO.cs">
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TB_ATOAud.cs">
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TB_Hangar.cs">
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TB_HangarAud.cs">
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tb_modelosLucesE.cs">
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tb_modelosLucesE_Aud.cs">
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TB_PlazaLat.cs">
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TB_PlazaLatAud.cs">
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tb_Usuario.cs">
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ConsultarUsuario_Result.cs">
+      <DependentUpon>AltelizaActivos.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="AltelizaActivos.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AltelizaActivos.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="AltelizaActivos.edmx.diagram">
+      <DependentUpon>AltelizaActivos.edmx</DependentUpon>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AltelizaActivos.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AltelizaActivos.edmx</DependentUpon>
+      <LastGenOutput>AltelizaActivos.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="AltelizaActivos.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AltelizaActivos.edmx</DependentUpon>
+      <LastGenOutput>AltelizaActivos.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VSToolsPath Condition="'$(VSToolsPath)' == '' and '$(VisualStudioVersion)' != '' and '$(VisualStudioVersion)' != '11.0'">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio</VSToolsPath>
+    <WcfServiceModelTargetPath>$(VSToolsPath)\WCF</WcfServiceModelTargetPath>
+  </PropertyGroup>
+  <Import Project="$(WcfServiceModelTargetPath)\Microsoft.VisualStudio.ServiceModel.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{3D9AD99F-2412-4246-B90B-4EAA41C64699}">
+        <WcfProjectProperties>
+          <AutoStart>True</AutoStart>
+        </WcfProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
